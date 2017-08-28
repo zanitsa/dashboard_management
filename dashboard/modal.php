@@ -17,6 +17,7 @@
         <input type="hidden" name="nama" value="<?=$key['nama']?>">
         <input type="hidden" name="grup" value="<?=$key['grup']?>">
         <input type="hidden" name="icon" value="<?=$key['icon']?>">
+        <input type="text" name="user" value="<?=$key['user']?>">
         <input type="hidden" name="temp" value="<?=$key['temp_grup']?>">
         <button type="submit" class="btn btn-danger" name="hapus"><i class="glyphicon glyphicon-trash"></i> Hapus</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

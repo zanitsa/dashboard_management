@@ -52,13 +52,14 @@
     $id = $_POST['id'];
     $z=$_POST['nama'];
     $icon = $_POST['icon'];
+    $user = $_POST['user'];
     $temp = cek_temp($_POST['temp']);
 
     if(pg_num_rows($temp) != 0){
       $text= "Tidak Bisa Dihapus, Data Masih Ada di Master Aplikasi";
       $notif= $error . $text . $penutup;
     }else{
-      if (delete_grup($id) && unlink($folder.$icon)) {
+      if (delete_grup($id) && delete_usergrp($id) && unlink($folder.$icon)) {
         $text= "Sukses Menghapus";
         $notif= $sukses . $text . $penutup;
       }

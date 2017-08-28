@@ -112,7 +112,10 @@ function delete_user($c){
 	$sql ="DELETE FROM user_link WHERE id='$c';";
 	return run($sql);
 }
-
+function delete_usergrp($d){
+	$sql ="DELETE FROM user_grup WHERE id='$d';";
+	return run($sql);
+}
 ////////////////// CEK //////////////////
 function cek_grup($a){
 	$sql="SELECT * FROM grup WHERE grup='$a'";
